@@ -6,6 +6,7 @@ Module Module1
         ' Declare variables for the number of rows and columns.
         Dim rows As Integer, cols As Integer
 
+        QuestionTheme()
 
         ' Get the dimensions of the matrix from the user.
         Console.Write("Enter the number of rows: ")
@@ -69,9 +70,11 @@ theme:
             Case "light"
                 System.Console.BackgroundColor = ConsoleColor.White
                 System.Console.Clear()
+                System.Console.ForegroundColor = ConsoleColor.Black
             Case "dark"
                 System.Console.BackgroundColor = ConsoleColor.Black
                 System.Console.Clear()
+                System.Console.ForegroundColor = ConsoleColor.White
             Case Else
                 System.Console.BackgroundColor = ConsoleColor.Red
                 System.Console.ForegroundColor = ConsoleColor.White
