@@ -62,44 +62,59 @@ Module Module1
         Console.ReadLine()
     End Sub
 
+    ' This method allows the user to customize the theme of the application.
+
     Private Sub QuestionTheme()
-theme:
-        System.Console.Write("Select The App Theme (Light or Dark) : ")
-        Dim theme As String = System.Console.ReadLine().Trim().ToLower()
+themeQ:
+        ' Get user input for the application theme (Light or Dark).
+        Console.Write("Select The App Theme (Light or Dark) : ")
+        Dim theme As String = Console.ReadLine().Trim().ToLower()
+        ' Use a Select Case statement to handle different theme choices.
         Select Case theme
             Case "light"
-                System.Console.BackgroundColor = ConsoleColor.White
-                System.Console.Clear()
-                System.Console.ForegroundColor = ConsoleColor.Black
+                ' Set console background color to white and text color to black for light theme.
+                Console.BackgroundColor = ConsoleColor.White
+                Console.Clear()
+                Console.ForegroundColor = ConsoleColor.Black
             Case "dark"
-                System.Console.BackgroundColor = ConsoleColor.Black
-                System.Console.Clear()
-                System.Console.ForegroundColor = ConsoleColor.White
+                ' Set console background color to black and text color to white for dark theme.
+                Console.BackgroundColor = ConsoleColor.Black
+                Console.Clear()
+                Console.ForegroundColor = ConsoleColor.White
             Case Else
-                System.Console.BackgroundColor = ConsoleColor.Red
-                System.Console.ForegroundColor = ConsoleColor.White
-                System.Console.WriteLine("The entered theme is invalid and not supported")
-                System.Console.ReadKey()
-                GoTo theme
+                ' Display error message for invalid theme selection.
+                Console.BackgroundColor = ConsoleColor.Red
+                Console.ForegroundColor = ConsoleColor.White
+                Console.WriteLine("The entered theme is invalid and not supported")
+                Console.ResetColor()
+                Console.ReadKey()
+                ' Use a GoTo statement to loop back to the theme selection prompt (not recommended practice).
+                GoTo themeQ
         End Select
-theColor:
-        System.Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
-        Dim color As String = System.Console.ReadLine().Trim().ToLower()
+themeColor:
+        ' Get user input for the application theme color (Blue, Green, Yellow, or Red).
+        Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
+        Dim color As String = Console.ReadLine().Trim().ToLower()
+
+        ' Use another Select Case statement to handle different theme color choices.
         Select Case color
             Case "blue"
-                System.Console.ForegroundColor = ConsoleColor.DarkCyan
+                Console.ForegroundColor = ConsoleColor.DarkCyan  ' Set text color to dark cyan.
             Case "green"
-                System.Console.ForegroundColor = ConsoleColor.Green
+                Console.ForegroundColor = ConsoleColor.Green   ' Set text color to green.
             Case "red"
-                System.Console.ForegroundColor = ConsoleColor.Red
+                Console.ForegroundColor = ConsoleColor.Red     ' Set text color to red.
             Case "yellow"
-                System.Console.ForegroundColor = ConsoleColor.Yellow
+                Console.ForegroundColor = ConsoleColor.Yellow   ' Set text color to yellow.
             Case Else
-                System.Console.BackgroundColor = ConsoleColor.Red
-                System.Console.ForegroundColor = ConsoleColor.White
-                System.Console.WriteLine("The entered theme color is invalid and not supported")
-                System.Console.ReadKey()
-                GoTo theColor
+                ' Display error message for invalid theme color selection.
+                Console.BackgroundColor = ConsoleColor.Red
+                Console.ForegroundColor = ConsoleColor.White
+                Console.WriteLine("The entered theme color is invalid and not supported")
+                Console.ResetColor()
+                Console.ReadKey()
+                ' Use a GoTo statement to loop back to the theme color selection prompt (not recommended practice).
+                GoTo themeColor
         End Select
 
     End Sub
