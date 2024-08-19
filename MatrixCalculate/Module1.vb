@@ -68,8 +68,13 @@ Module Module1
         System.Console.WriteLine("------------------------------")
         System.Console.ForegroundColor = color
         MatrixReview(matrix)
+        System.Console.ForegroundColor = ConsoleColor.Magenta
+        System.Console.WriteLine("------------------------------")
+        System.Console.ForegroundColor = ConsoleColor.Red
+        System.Console.WriteLine("Programmer : Amin Mirzaei - Github(UserName) : AminMirzaeiOne")
 
-        Console.ReadLine()
+
+        System.Console.ReadKey()
     End Sub
 
 
