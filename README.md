@@ -34,7 +34,7 @@ Among the first projects of Amin Mirzaei after learning the basic concepts of Vi
 3 - Press the Enter button<br />
 4 - Then enter the correct column <br />
 5 - Press the Enter button<br />
-6 - Enter the elements br />
+6 - Enter the elements <br />
 7 - View the result
 
 <h2>📷 Screenshots</h2>
