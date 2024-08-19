@@ -9,19 +9,19 @@ Module Module1
         QuestionTheme()
 
         ' Get the dimensions of the matrix from the user.
-        Console.Write("Enter the number of rows: ")
-        rows = Convert.ToInt32(Console.ReadLine())
-        Console.Write("Enter the number of columns: ")
-        cols = Convert.ToInt32(Console.ReadLine())
+        System.Console.Write("Enter the number of rows: ")
+        rows = System.Convert.ToInt32(System.Console.ReadLine())
+        System.Console.Write("Enter the number of columns: ")
+        cols = System.Convert.ToInt32(System.Console.ReadLine())
 
         ' Create a 2D array to represent the matrix.
         Dim matrix(rows - 1, cols - 1) As Integer
 
         ' Get the elements of the matrix from the user.
-        Console.Write("Enter the elements of the matrix:")
+        System.Console.WriteLine("Enter the elements of the matrix:")
         For i As Integer = 0 To rows - 1
             For j As Integer = 0 To cols - 1
-                matrix(i, j) = Convert.ToInt32(Console.ReadLine())
+                matrix(i, j) = System.Convert.ToInt32(System.Console.ReadLine())
             Next
         Next
 
@@ -37,14 +37,14 @@ Module Module1
                 sumTotal += matrix(i, j)
             Next
         Next
-        Console.WriteLine("Sum of all elements: " & sumTotal)
+        System.Console.WriteLine("Sum of all elements: " & sumTotal)
 
         ' Calculate the sum of the main diagonal elements.
         Dim sumDiagonal As Integer = 0
-        For i As Integer = 0 To Math.Min(rows, cols) - 1
+        For i As Integer = 0 To System.Math.Min(rows, cols) - 1
             sumDiagonal += matrix(i, i)
         Next
-        Console.WriteLine("Sum of main diagonal elements: " & sumDiagonal)
+        System.Console.WriteLine("Sum of main diagonal elements: " & sumDiagonal)
 
         ' Calculate the sum of elements above the main diagonal.
         Dim sumAboveDiagonal As Integer = 0
@@ -53,7 +53,7 @@ Module Module1
                 sumAboveDiagonal += matrix(i, j)
             Next
         Next
-        Console.WriteLine("Sum of elements above the main diagonal: " & sumAboveDiagonal)
+        System.Console.WriteLine("Sum of elements above the main diagonal: " & sumAboveDiagonal)
 
         ' Calculate the sum of elements below the main diagonal.
         Dim sumBelowDiagonal As Integer = 0
@@ -62,7 +62,7 @@ Module Module1
                 sumBelowDiagonal += matrix(i, j)
             Next
         Next
-        Console.WriteLine("Sum of elements below the main diagonal: " & sumBelowDiagonal)
+        System.Console.WriteLine("Sum of elements below the main diagonal: " & sumBelowDiagonal)
         color = System.Console.ForegroundColor
         System.Console.ForegroundColor = ConsoleColor.Magenta
         System.Console.WriteLine("------------------------------")
@@ -129,10 +129,10 @@ Module Module1
         Next
 
         ' Show results
-        Console.WriteLine("Is diagonal matrix? " & isDiagonal)
-        Console.WriteLine("Is upper triangular matrix? " & isUpperTriangular)
-        Console.WriteLine("Is lower triangular matrix? " & isLowerTriangular)
-        Console.WriteLine("Is symmetric matrix? " & isSymmetric)
+        System.Console.WriteLine("Is diagonal matrix? " & isDiagonal)
+        System.Console.WriteLine("Is upper triangular matrix? " & isUpperTriangular)
+        System.Console.WriteLine("Is lower triangular matrix? " & isLowerTriangular)
+        System.Console.WriteLine("Is symmetric matrix? " & isSymmetric)
     End Sub
 
 
@@ -142,52 +142,52 @@ Module Module1
     Private Sub QuestionTheme()
 themeQ:
         ' Get user input for the application theme (Light or Dark).
-        Console.Write("Select The App Theme (Light or Dark) : ")
-        Dim theme As String = Console.ReadLine().Trim().ToLower()
+        System.Console.Write("Select The App Theme (Light or Dark) : ")
+        Dim theme As String = System.Console.ReadLine().Trim().ToLower()
         ' Use a Select Case statement to handle different theme choices.
         Select Case theme
             Case "light"
                 ' Set console background color to white and text color to black for light theme.
-                Console.BackgroundColor = ConsoleColor.White
-                Console.Clear()
-                Console.ForegroundColor = ConsoleColor.Black
+                System.Console.BackgroundColor = ConsoleColor.White
+                System.Console.Clear()
+                System.Console.ForegroundColor = ConsoleColor.Black
             Case "dark"
                 ' Set console background color to black and text color to white for dark theme.
-                Console.BackgroundColor = ConsoleColor.Black
-                Console.Clear()
-                Console.ForegroundColor = ConsoleColor.White
+                System.Console.BackgroundColor = ConsoleColor.Black
+                System.Console.Clear()
+                System.Console.ForegroundColor = ConsoleColor.White
             Case Else
                 ' Display error message for invalid theme selection.
-                Console.BackgroundColor = ConsoleColor.Red
-                Console.ForegroundColor = ConsoleColor.White
-                Console.WriteLine("The entered theme is invalid and not supported")
-                Console.ResetColor()
-                Console.ReadKey()
+                System.Console.BackgroundColor = ConsoleColor.Red
+                System.Console.ForegroundColor = ConsoleColor.White
+                System.Console.WriteLine("The entered theme is invalid and not supported")
+                System.Console.ResetColor()
+                System.Console.ReadKey()
                 ' Use a GoTo statement to loop back to the theme selection prompt (not recommended practice).
                 GoTo themeQ
         End Select
 themeColor:
         ' Get user input for the application theme color (Blue, Green, Yellow, or Red).
-        Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
+        System.Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
         Dim color As String = Console.ReadLine().Trim().ToLower()
 
         ' Use another Select Case statement to handle different theme color choices.
         Select Case color
             Case "blue"
-                Console.ForegroundColor = ConsoleColor.DarkCyan  ' Set text color to dark cyan.
+                System.Console.ForegroundColor = ConsoleColor.DarkCyan  ' Set text color to dark cyan.
             Case "green"
-                Console.ForegroundColor = ConsoleColor.Green   ' Set text color to green.
+                System.Console.ForegroundColor = ConsoleColor.Green   ' Set text color to green.
             Case "red"
-                Console.ForegroundColor = ConsoleColor.Red     ' Set text color to red.
+                System.Console.ForegroundColor = ConsoleColor.Red     ' Set text color to red.
             Case "yellow"
-                Console.ForegroundColor = ConsoleColor.Yellow   ' Set text color to yellow.
+                System.Console.ForegroundColor = ConsoleColor.Yellow   ' Set text color to yellow.
             Case Else
                 ' Display error message for invalid theme color selection.
-                Console.BackgroundColor = ConsoleColor.Red
-                Console.ForegroundColor = ConsoleColor.White
-                Console.WriteLine("The entered theme color is invalid and not supported")
-                Console.ResetColor()
-                Console.ReadKey()
+                System.Console.BackgroundColor = ConsoleColor.Red
+                System.Console.ForegroundColor = ConsoleColor.White
+                System.Console.WriteLine("The entered theme color is invalid and not supported")
+                System.Console.ResetColor()
+                System.Console.ReadKey()
                 ' Use a GoTo statement to loop back to the theme color selection prompt (not recommended practice).
                 GoTo themeColor
         End Select
