@@ -14,7 +14,7 @@ Among the first projects of Amin Mirzaei after learning the basic concepts of Vi
 
 <h2> ⭐ Features</h2>
 - Light Mode and Dark Mode<br />
-- Custom number of students <br />
+- Choose the color of the program from blue and red and green and yellow <br />
 
 <h2> 🏗 Build Information</h2>
 - Made in year = January 2016 <br />
@@ -25,13 +25,17 @@ Among the first projects of Amin Mirzaei after learning the basic concepts of Vi
 
 
 <h2> 📜 Program Rules</h2>
-1 - The numbers must be correct<br />
+1 - The new rules of the matrix<br />
+2 - The numbers should preferably be positive and logical <br />
 
 <h2> 💡 Program Help</h2>
 1 - Run the program first<br />
-2 - Then enter the correct number<br />
+2 - Then enter the correct row<br />
 3 - Press the Enter button<br />
-4 - View the result
+4 - Then enter the correct column <br />
+5 - Press the Enter button<br />
+6 - Enter the elements br />
+7 - View the result
 
 <h2>📷 Screenshots</h2>
 <img width="681" alt="Capture21" src="https://github.com/user-attachments/assets/96937480-5076-43e7-b8c1-42dd8cb9af05">
