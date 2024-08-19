@@ -62,10 +62,43 @@ Module Module1
     End Sub
 
     Private Sub QuestionTheme()
+theme:
         System.Console.Write("Select The App Theme (Light or Dark) : ")
         Dim theme As String = System.Console.ReadLine().Trim().ToLower()
+        Select Case theme
+            Case "light"
+                System.Console.BackgroundColor = ConsoleColor.White
+                System.Console.Clear()
+            Case "dark"
+                System.Console.BackgroundColor = ConsoleColor.Black
+                System.Console.Clear()
+            Case Else
+                System.Console.BackgroundColor = ConsoleColor.Red
+                System.Console.ForegroundColor = ConsoleColor.White
+                System.Console.WriteLine("The entered theme is invalid and not supported")
+                System.Console.ReadKey()
+                GoTo theme
+        End Select
+theColor:
         System.Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
         Dim color As String = System.Console.ReadLine().Trim().ToLower()
+        Select Case color
+            Case "blue"
+                System.Console.ForegroundColor = ConsoleColor.DarkCyan
+            Case "green"
+                System.Console.ForegroundColor = ConsoleColor.Green
+            Case "red"
+                System.Console.ForegroundColor = ConsoleColor.Red
+            Case "yellow"
+                System.Console.ForegroundColor = ConsoleColor.Yellow
+            Case Else
+                System.Console.BackgroundColor = ConsoleColor.Red
+                System.Console.ForegroundColor = ConsoleColor.White
+                System.Console.WriteLine("The entered theme color is invalid and not supported")
+                System.Console.ReadKey()
+                GoTo theColor
+        End Select
+
     End Sub
 
 End Module
