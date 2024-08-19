@@ -62,7 +62,67 @@ Module Module1
         Console.ReadLine()
     End Sub
 
+
+    Private Sub MatrixReview(matrix As Integer(,))
+        Dim isDiagonal As Boolean = True
+        Dim isUpperTriangular As Boolean = True
+        Dim isLowerTriangular As Boolean = True
+        Dim isSymmetric As Boolean = True
+
+        ' Diagonal check
+        For i As Integer = 0 To matrix.GetUpperBound(0)
+            For j As Integer = 0 To matrix.GetUpperBound(1)
+                If i <> j AndAlso matrix(i, j) <> 0 Then
+                    isDiagonal = False
+                    Exit For
+                End If
+            Next
+            If Not isDiagonal Then Exit For
+        Next
+
+        ' Triangularity check above
+        For i As Integer = 1 To matrix.GetUpperBound(0)
+            For j As Integer = 0 To i - 1
+                If matrix(i, j) <> 0 Then
+                    isUpperTriangular = False
+                    Exit For
+                End If
+            Next
+            If Not isUpperTriangular Then Exit For
+        Next
+
+        ' Triangular bottom check
+        For i As Integer = 0 To matrix.GetUpperBound(0) - 1
+            For j As Integer = i + 1 To matrix.GetUpperBound(1)
+                If matrix(i, j) <> 0 Then
+                    isLowerTriangular = False
+                    Exit For
+                End If
+            Next
+            If Not isLowerTriangular Then Exit For
+        Next
+
+        ' Check for symmetry
+        For i As Integer = 0 To matrix.GetUpperBound(0)
+            For j As Integer = i + 1 To matrix.GetUpperBound(1)
+                If matrix(i, j) <> matrix(j, i) Then
+                    isSymmetric = False
+                    Exit For
+                End If
+            Next
+            If Not isSymmetric Then Exit For
+        Next
+
+        ' Show results
+        Console.WriteLine("Is diagonal matrix? " & isDiagonal)
+        Console.WriteLine("Is upper triangular matrix? " & isUpperTriangular)
+        Console.WriteLine("Is lower triangular matrix? " & isLowerTriangular)
+        Console.WriteLine("Is symmetric matrix? " & isSymmetric)
+    End Sub
+
+
     ' This method allows the user to customize the theme of the application.
+
 
     Private Sub QuestionTheme()
 themeQ:
