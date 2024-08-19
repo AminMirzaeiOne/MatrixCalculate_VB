@@ -6,6 +6,7 @@ Module Module1
         ' Declare variables for the number of rows and columns.
         Dim rows As Integer, cols As Integer
 
+
         ' Get the dimensions of the matrix from the user.
         Console.Write("Enter the number of rows: ")
         rows = Convert.ToInt32(Console.ReadLine())
@@ -16,7 +17,7 @@ Module Module1
         Dim matrix(rows - 1, cols - 1) As Integer
 
         ' Get the elements of the matrix from the user.
-        Console.WriteLine("Enter the elements of the matrix:")
+        Console.Write("Enter the elements of the matrix:")
         For i As Integer = 0 To rows - 1
             For j As Integer = 0 To cols - 1
                 matrix(i, j) = Convert.ToInt32(Console.ReadLine())
@@ -58,6 +59,13 @@ Module Module1
         Console.WriteLine("Sum of elements below the main diagonal: " & sumBelowDiagonal)
 
         Console.ReadLine()
+    End Sub
+
+    Private Sub QuestionTheme()
+        System.Console.Write("Select The App Theme (Light or Dark) : ")
+        Dim theme As String = System.Console.ReadLine().Trim().ToLower()
+        System.Console.Write("Select The App Theme Color (Blue or Green or Yellow or Red) : ")
+        Dim color As String = System.Console.ReadLine().Trim().ToLower()
     End Sub
 
 End Module
