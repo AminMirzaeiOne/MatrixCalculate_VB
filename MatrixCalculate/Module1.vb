@@ -5,7 +5,7 @@ Module Module1
     Sub Main()
         ' Declare variables for the number of rows and columns.
         Dim rows As Integer, cols As Integer
-
+        Dim color As System.ConsoleColor = ConsoleColor.White
         QuestionTheme()
 
         ' Get the dimensions of the matrix from the user.
@@ -24,6 +24,11 @@ Module Module1
                 matrix(i, j) = Convert.ToInt32(Console.ReadLine())
             Next
         Next
+
+        color = System.Console.ForegroundColor
+        System.Console.ForegroundColor = ConsoleColor.Magenta
+        System.Console.WriteLine("------------------------------")
+        System.Console.ForegroundColor = color
 
         ' Calculate the sum of all elements.
         Dim sumTotal As Integer = 0
@@ -58,6 +63,11 @@ Module Module1
             Next
         Next
         Console.WriteLine("Sum of elements below the main diagonal: " & sumBelowDiagonal)
+        color = System.Console.ForegroundColor
+        System.Console.ForegroundColor = ConsoleColor.Magenta
+        System.Console.WriteLine("------------------------------")
+        System.Console.ForegroundColor = color
+        MatrixReview(matrix)
 
         Console.ReadLine()
     End Sub
