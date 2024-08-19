@@ -2,7 +2,15 @@
 
 <h2> 👨‍💻 About Project</h2>
 Among the first projects of Amin Mirzaei after learning the basic concepts of Visual Basic <br />
-Determines whether the entered integer is positive or negative, then displays it on the console screen <br />
+---------------------------------------------------------------------- <br />
+1 - Displays the total matrix elements on the console screen <br />
+2 - Displays the sum of elements of the main diameter on the console screen <br />
+3 - Displays the sum of elements above the main diameter on the console screen <br />
+4 - Displays the sum of the elements below the main diameter <br />
+5 - Determine whether the matrix is ​​diagonal or not <br />
+6 - Determine whether the above matrix is ​​triangular or not <br />
+7- Determine if the lower matrix is ​​triangular or not <br />
+8- Determine if the matrix is ​​symmetric or not <br />
 
 <h2> ⭐ Features</h2>
 - Light Mode and Dark Mode<br />
@@ -26,4 +34,5 @@ Determines whether the entered integer is positive or negative, then displays it
 4 - View the result
 
 <h2>📷 Screenshots</h2>
-<img width="674" alt="Capture16" src="https://github.com/user-attachments/assets/60d526fb-2d8b-4a82-862c-b84dee0882f5">
+<img width="681" alt="Capture21" src="https://github.com/user-attachments/assets/96937480-5076-43e7-b8c1-42dd8cb9af05">
+<img width="675" alt="Capture22" src="https://github.com/user-attachments/assets/b2f5b207-f745-4722-b5ce-0063ac6e18c7">
